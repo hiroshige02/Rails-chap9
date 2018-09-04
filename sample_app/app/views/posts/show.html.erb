@@ -1,0 +1,9 @@
+<h1>タイトル</h1>
+<%= @post.title %>
+<h1>本文</h1>
+<%= @post.body %>
+<h2>画像</h2>
+<%= attachment_image_tag @post, :image, :fill, 300, 300, format: 'jpeg' %>
+
+<%= link_to "編集", edit_post_path(@post) %>
+<%= link_to "削除", destroy_post_path(@post), method: :delete, "data-confirm" => "本当に削除しますか？" %>
